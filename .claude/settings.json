@@ -5,10 +5,27 @@
       "Bash(npx create-next-app@latest win-website --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\")",
       "Bash(npx create-next-app@latest win-website --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
       "Bash(npm run:*)",
-      "Bash(pkill -f \"next dev\")"
+      "Bash(pkill -f \"next dev\")",
+      "Bash(pdftotext \"/home/nathan-voglossou/WIN/avril-2022-WIN-PrÃ©sntation.pdf\" -)",
+      "Bash(pdftotext \"/home/nathan-voglossou/WIN/PrÃ©sentation Women Impact Network WIN Juin 2024 IJN.pdf\" -)",
+      "Bash(ls *.pdf)",
+      "Bash(xxd)",
+      "Bash(pdftotext \"$f\" -)",
+      "Bash(pip3 install:*)",
+      "Bash(python3 -c \"from pptx import Presentation; print\\(''''OK''''\\)\")",
+      "Bash(ls /home/nathan-voglossou/WIN/*.pptx)",
+      "Bash(while read:*)",
+      "Bash(find /home/nathan-voglossou/WIN/ -name *.txt -o -name *.xml)",
+      "Bash(pdftotext \"/home/nathan-voglossou/WIN/extracted-images/Programmes-cadre-de-WIN-WPS-Office.pdf\" -)",
+      "Bash(ls /home/nathan-voglossou/WIN/extracted-images/Programmes-cadre-de-WIN-WPS-Office-*.jpg)",
+      "Bash(ls /home/nathan-voglossou/WIN/extracted-images/Programmes-cadre-de-WIN-WPS-Office-*.png)",
+      "Read(//dev/**)",
+      "WebFetch(domain:www.facebook.com)",
+      "WebFetch(domain:web.facebook.com)"
     ],
     "additionalDirectories": [
-      "/home/nathan-voglossou/WIN"
+      "/home/nathan-voglossou/WIN",
+      "/home/nathan-voglossou/WIN/win-website/public"
     ]
   }
 }
