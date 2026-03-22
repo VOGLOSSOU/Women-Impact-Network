@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
 import { useLang } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 
@@ -36,36 +35,21 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3">
-          <div className="relative h-14 w-40">
-            <Image
-              src="/win-logo.png"
-              alt="Women Impact Network"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-          <div
-            className={`hidden sm:flex flex-col leading-tight border-l pl-3 ${
-              scrolled ? "border-[#1B6B3A]/30" : "border-white/30"
+        <a href="#" className="flex flex-col leading-tight">
+          <span
+            className={`font-black text-lg tracking-widest ${
+              scrolled ? "text-[#1B6B3A]" : "text-white"
             }`}
           >
-            <span
-              className={`font-black text-sm tracking-widest ${
-                scrolled ? "text-[#1B6B3A]" : "text-white"
-              }`}
-            >
-              YEBA OPPECI
-            </span>
-            <span
-              className={`text-[10px] font-medium tracking-wider ${
-                scrolled ? "text-gray-500" : "text-white/70"
-              }`}
-            >
-              OPPORTUNITÉ ÉCONOMIQUE INCLUSIVE
-            </span>
-          </div>
+            YEBA OPPECI
+          </span>
+          <span
+            className={`text-[10px] font-medium tracking-wider ${
+              scrolled ? "text-gray-500" : "text-white/70"
+            }`}
+          >
+            OPPORTUNITÉ ÉCONOMIQUE INCLUSIVE
+          </span>
         </a>
 
         {/* Desktop nav */}

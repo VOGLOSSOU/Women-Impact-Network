@@ -28,11 +28,6 @@ export default function Hero() {
 
       {/* Content — fully centered */}
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 pt-24 pb-16">
-        {/* Badge */}
-        <span className="inline-block px-4 py-1.5 rounded-full bg-[#1B6B3A]/30 border border-[#2D9A5C]/50 text-[#7EE8A2] text-xs font-bold tracking-widest uppercase mb-6">
-          {t(h.badge)}
-        </span>
-
         {/* Title */}
         <h1 className="text-6xl sm:text-7xl lg:text-9xl font-black text-white tracking-tight leading-none mb-4">
           {t(h.title)}
