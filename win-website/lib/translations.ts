@@ -146,10 +146,10 @@ export const translations = {
       en: "Tangible results for African women entrepreneurs",
     },
     stats: [
-      { value: "1000+", label: { fr: "Entrepreneurs formées", en: "Entrepreneurs trained" } },
-      { value: "10", label: { fr: "Villes au Bénin", en: "Cities in Benin" } },
-      { value: "8", label: { fr: "Programmes actifs", en: "Active programs" } },
-      { value: "229", label: { fr: "Jeunes filles en zone rurale", en: "Young girls in rural areas" } },
+      { value: "2000+", label: { fr: "Femmes accompagnées", en: "Women supported" } },
+      { value: "20+", label: { fr: "Programmes", en: "Programs" } },
+      { value: "11", label: { fr: "Villes au Bénin", en: "Cities in Benin" } },
+      { value: "500+", label: { fr: "Jeunes filles en zone rurale", en: "Young girls in rural areas" } },
     ],
   },
   partners: {

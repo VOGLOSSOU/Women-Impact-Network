@@ -62,9 +62,9 @@ export default function Hero() {
           {/* Quick stats */}
           <div className="flex flex-wrap justify-center gap-12 mt-16 pt-8 border-t border-white/20 w-full max-w-lg">
             {[
-              { value: "1000+", label: { fr: "Femmes formées", en: "Women trained" } },
-              { value: "8", label: { fr: "Programmes", en: "Programs" } },
-              { value: "10", label: { fr: "Villes", en: "Cities" } },
+              { value: "2000+", label: { fr: "Femmes accompagnées", en: "Women supported" } },
+              { value: "20+", label: { fr: "Programmes", en: "Programs" } },
+              { value: "11", label: { fr: "Villes", en: "Cities" } },
             ].map((stat) => (
               <div key={stat.value} className="text-center">
                 <div className="text-3xl font-black text-white">{stat.value}</div>

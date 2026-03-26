@@ -108,10 +108,10 @@ export const translations = {
     badge:  { fr: "Notre impact", en: "Our impact" },
     title:  { fr: "Des résultats concrets\npour les femmes du Bénin", en: "Concrete results\nfor women in Benin" },
     stats: [
-      { value: "50+",  label: { fr: "Femmes mobilisées", en: "Women mobilized" } },
-      { value: "5",    label: { fr: "Groupements soutenus", en: "Groups supported" } },
+      { value: "250+", label: { fr: "Femmes accompagnées", en: "Women supported" } },
+      { value: "10",   label: { fr: "Groupements soutenus", en: "Groups supported" } },
       { value: "6",    label: { fr: "Types d'activités", en: "Activity types" } },
-      { value: "4",    label: { fr: "Zones d'intervention", en: "Intervention areas" } },
+      { value: "5",    label: { fr: "Zones d'intervention", en: "Intervention areas" } },
     ],
     galleryTitle: { fr: "Moments du projet", en: "Project moments" },
   },
