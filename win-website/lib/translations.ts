@@ -2,6 +2,7 @@ export type Lang = "fr" | "en";
 
 export const translations = {
   nav: {
+    home: { fr: "Accueil", en: "Home" },
     about: { fr: "À propos", en: "About" },
     programs: { fr: "Programmes", en: "Programs" },
     impact: { fr: "Impact", en: "Impact" },
