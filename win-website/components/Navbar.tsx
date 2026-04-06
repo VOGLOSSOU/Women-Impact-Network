@@ -21,7 +21,6 @@ export default function Navbar() {
     { href: "#about", label: nav.about[lang] },
     { href: "#programs", label: nav.programs[lang] },
     { href: "#impact", label: nav.impact[lang] },
-    { href: "#partners", label: nav.partners[lang] },
     { href: "#contact", label: nav.contact[lang] },
   ];
 
