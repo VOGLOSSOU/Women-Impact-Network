@@ -58,7 +58,7 @@ export const translations = {
           fr: "Un séminaire intensif de stratégie entrepreneuriale pour passer de l'idée au projet. Basé sur des valeurs collectives et collaboratives, il réunit des femmes porteuses de projets pour échanger, construire et booster leurs entreprises.",
           en: "An intensive entrepreneurship strategy seminar to go from idea to project. Based on collective values, it brings together women with projects to exchange, build, and boost their businesses.",
         },
-        image: "/bootcamp-1.jpg",
+        image: "/formation-1.jpg",
         tags: { fr: ["Séminaire", "Stratégie", "Mentorat"], en: ["Seminar", "Strategy", "Mentoring"] },
       },
       {
