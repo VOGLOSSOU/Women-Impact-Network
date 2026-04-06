@@ -111,7 +111,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
-              <Image src="/women-group-4.jpg" alt="Fondatrice WIN" fill className="object-cover" />
+              <Image src="/impact-3.jpg" alt="Ayodélé OGNIN — Fondatrice WIN" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div>
