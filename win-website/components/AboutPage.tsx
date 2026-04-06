@@ -23,21 +23,18 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero banner */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-end overflow-hidden">
-        <div className="absolute inset-0">
-          <Image src="/hero-2.jpg" alt="À propos de WIN" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D0816] via-[#0D0816]/60 to-transparent" />
+      <section className="bg-[#0D0816] pt-40 pb-24 text-center px-4">
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="h-px w-12 bg-[#C41230]" />
+          <span className="text-[#C41230] text-xs font-bold tracking-[0.2em] uppercase">WIN</span>
+          <div className="h-px w-12 bg-[#C41230]" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 w-full">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="h-px w-10 bg-[#C41230]" />
-            <span className="text-[#C41230] text-xs font-bold tracking-[0.2em] uppercase">WIN</span>
-          </div>
-          <h1 className="text-5xl sm:text-6xl font-black text-white leading-tight">
-            {t(about.title)}
-          </h1>
-          <p className="text-white/70 text-lg mt-4 max-w-2xl">{t(about.subtitle)}</p>
-        </div>
+        <h1 className="text-5xl sm:text-7xl font-black text-white leading-tight mb-6">
+          {t(about.title)}
+        </h1>
+        <p className="text-white/60 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+          {t(about.subtitle)}
+        </p>
       </section>
 
       {/* Mission & Vision */}
