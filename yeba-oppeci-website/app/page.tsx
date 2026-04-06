@@ -2,9 +2,8 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Pillars from "@/components/Pillars";
-import Activities from "@/components/Activities";
+import HomeActivities from "@/components/HomeActivities";
 import Impact from "@/components/Impact";
-import Partners from "@/components/Partners";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -15,9 +14,8 @@ export default function Home() {
       <Hero />
       <About />
       <Pillars />
-      <Activities />
+      <HomeActivities />
       <Impact />
-      <Partners />
       <Contact />
       <Footer />
     </main>
