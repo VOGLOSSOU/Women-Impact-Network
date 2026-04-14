@@ -17,16 +17,16 @@ export default function HomeAbout() {
           <div className="relative">
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/event-2.jpg" alt="WIN event" fill className="object-cover" />
+                <Image src="/event-2.jpg" alt="WIN event" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
-                <Image src="/women-group-3.jpg" alt="WIN femmes" fill className="object-cover" />
+                <Image src="/women-group-3.jpg" alt="WIN femmes" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-48 rounded-2xl overflow-hidden">
-                <Image src="/networking.jpg" alt="WIN networking" fill className="object-cover" />
+                <Image src="/networking.jpg" alt="WIN networking" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-48 rounded-2xl overflow-hidden mt-4">
-                <Image src="/conference.jpg" alt="WIN conférence" fill className="object-cover" />
+                <Image src="/conference.jpg" alt="WIN conférence" fill className="object-cover" unoptimized />
               </div>
             </div>
             {/* Floating badge */}

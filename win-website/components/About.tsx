@@ -1,17 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { useLang } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 
 export default function About() {
   const { t } = useLang();
   const about = translations.about;
-  const [imgSrc, setImgSrc] = useState("/event-2.jpg");
-
-  useEffect(() => {
-    setImgSrc(`/event-2.jpg?v=${Date.now()}`);
-  }, []);
 
   return (
     <section id="about" className="py-24 bg-white">
@@ -35,7 +29,7 @@ export default function About() {
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={imgSrc}
+                src="/event-2.jpg"
                 alt="Women Impact Network event"
                 className="w-full h-full object-cover"
               />

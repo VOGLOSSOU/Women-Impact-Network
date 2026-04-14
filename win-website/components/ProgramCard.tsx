@@ -28,6 +28,7 @@ export default function ProgramCard({ program }: { program: ProgramItem }) {
           alt={t(program.title)}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-700"
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
         {/* Number badge */}

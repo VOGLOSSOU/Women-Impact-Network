@@ -39,7 +39,7 @@ export default function HomePrograms() {
 
         {/* 3 featured programs */}
         <div className="grid md:grid-cols-3 gap-8">
-          {featured.map((program, i) => (
+          {featured.map((program) => (
             <div
               key={program.id}
               className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group"
@@ -51,6 +51,7 @@ export default function HomePrograms() {
                   alt={t(program.title)}
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute top-4 left-4 w-10 h-10 rounded-full bg-gradient-to-br from-[#8B1A6B] to-[#C41230] flex items-center justify-center">

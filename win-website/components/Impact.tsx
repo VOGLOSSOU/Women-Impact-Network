@@ -17,6 +17,7 @@ export default function Impact() {
           alt="WIN impact"
           fill
           className="object-cover"
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0D0816]/95 via-[#4A0E35]/90 to-[#8B1A6B]/85" />
       </div>
@@ -62,6 +63,7 @@ export default function Impact() {
                   alt={`WIN impact ${i + 1}`}
                   fill
                   className="object-cover hover:scale-110 transition-transform duration-500"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
               </div>

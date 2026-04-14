@@ -22,6 +22,7 @@ export default function Footer() {
                   alt="Women Impact Network"
                   fill
                   className="object-contain"
+                  unoptimized
                 />
               </div>
             </div>

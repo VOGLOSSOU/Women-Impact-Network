@@ -18,6 +18,7 @@ export default function Hero() {
           fill
           className="object-cover"
           priority
+          unoptimized
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-[#0D0816]/70" />

@@ -55,6 +55,7 @@ export default function ProgramsPage() {
                       alt={t(program.title)}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
+                      unoptimized
                     />
                   </div>
                   <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
@@ -63,6 +64,7 @@ export default function ProgramsPage() {
                       alt={t(program.title)}
                       fill
                       className="object-cover hover:scale-105 transition-transform duration-500"
+                      unoptimized
                     />
                   </div>
                 </div>
