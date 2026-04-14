@@ -90,16 +90,16 @@ export default function AboutPage() {
             {/* Right side — stacked images */}
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-72 rounded-2xl overflow-hidden">
-                <Image src="/event-2.jpg" alt="WIN" fill className="object-cover" />
+                <Image src="/event-2.jpg" alt="WIN" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-72 rounded-2xl overflow-hidden mt-10">
-                <Image src="/impact-1.jpg" alt="WIN impact" fill className="object-cover" />
+                <Image src="/impact-1.jpg" alt="WIN impact" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-52 rounded-2xl overflow-hidden">
-                <Image src="/workshop-1.jpg" alt="WIN workshop" fill className="object-cover" />
+                <Image src="/workshop-1.jpg" alt="WIN workshop" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-52 rounded-2xl overflow-hidden mt-4">
-                <Image src="/formation-2.jpg" alt="WIN formation" fill className="object-cover" />
+                <Image src="/formation-2.jpg" alt="WIN formation" fill className="object-cover" unoptimized />
               </div>
             </div>
           </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative h-[500px] rounded-3xl overflow-hidden">
-              <Image src="/impact-3.jpg" alt="Ayodélé OGNIN — Fondatrice WIN" fill className="object-cover" />
+              <Image src="/impact-3.jpg" alt="Ayodélé OGNIN — Fondatrice WIN" fill className="object-cover" unoptimized />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
             </div>
             <div>
