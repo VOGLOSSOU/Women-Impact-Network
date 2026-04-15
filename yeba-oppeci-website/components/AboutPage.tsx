@@ -1,10 +1,11 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { useLang } from "@/context/LanguageContext";
 import { translations } from "@/lib/translations";
 
-const pillarIcons: Record<number, JSX.Element> = {
+const pillarIcons: Record<number, React.JSX.Element> = {
   0: <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064" /></svg>,
   1: <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>,
   2: <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}><path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>,
@@ -50,16 +51,16 @@ export default function AboutPage() {
             {/* Images */}
             <div className="grid grid-cols-2 gap-4">
               <div className="relative h-64 rounded-2xl overflow-hidden">
-                <Image src="/yeba-engagement-3.jpg" alt="YEBA OPPECI" fill className="object-cover" />
+                <Image src="/yeba-engagement-3.jpg" alt="YEBA OPPECI" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-64 rounded-2xl overflow-hidden mt-8">
-                <Image src="/yeba-marche-2.jpg" alt="Marché communautaire" fill className="object-cover" />
+                <Image src="/yeba-marche-2.jpg" alt="Marché communautaire" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-52 rounded-2xl overflow-hidden">
-                <Image src="/yeba-formation-2.jpg" alt="Formation" fill className="object-cover" />
+                <Image src="/yeba-formation-2.jpg" alt="Formation" fill className="object-cover" unoptimized />
               </div>
               <div className="relative h-52 rounded-2xl overflow-hidden mt-4">
-                <Image src="/yeba-engagement-4.jpg" alt="Engagement" fill className="object-cover" />
+                <Image src="/yeba-engagement-4.jpg" alt="Engagement" fill className="object-cover" unoptimized />
               </div>
             </div>
 

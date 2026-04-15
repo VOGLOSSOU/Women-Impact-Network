@@ -97,6 +97,7 @@ export default function Impact() {
                 alt={t(item.title)}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
+                unoptimized
               />
 
               {/* Ombre permanente en bas */}

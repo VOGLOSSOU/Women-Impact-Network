@@ -20,7 +20,7 @@ function Modal({ activity, onClose }: { activity: Activity; onClose: () => void 
       >
         {/* Image pleine largeur */}
         <div className="relative h-80 w-full">
-          <Image src={activity.image} alt={t(activity.title)} fill className="object-cover" />
+          <Image src={activity.image} alt={t(activity.title)} fill className="object-cover" unoptimized />
           {/* Overlay dégradé bas */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
@@ -117,6 +117,7 @@ export default function ActivitiesPage() {
                     alt={t(activity.title)}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    unoptimized
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#1B6B3A] text-white text-xs font-black uppercase tracking-wide">

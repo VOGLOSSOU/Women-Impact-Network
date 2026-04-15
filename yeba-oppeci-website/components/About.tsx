@@ -20,6 +20,7 @@ export default function About() {
                 alt="YEBA OPPECI — Femmes engagées"
                 fill
                 className="object-cover"
+                unoptimized
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0A1F0A]/60 via-transparent to-transparent" />
             </div>

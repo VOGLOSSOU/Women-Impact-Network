@@ -30,6 +30,7 @@ export default function Footer() {
                 alt="Women Impact Network"
                 fill
                 className="object-contain object-left"
+                unoptimized
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed max-w-md mb-4">

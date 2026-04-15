@@ -18,6 +18,7 @@ export default function Hero() {
           fill
           className="object-cover object-center"
           priority
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-[#0A1F0A]/90" />
       </div>
