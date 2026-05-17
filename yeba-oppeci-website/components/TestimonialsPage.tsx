@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { useLang } from "@/context/LanguageContext";
+import WrittenTestimonials from "@/components/WrittenTestimonials";
 
 type BiLang = { fr: string; en: string };
 
@@ -224,6 +225,9 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
+
+      {/* Témoignages écrits */}
+      <WrittenTestimonials />
 
       {selectedVideo && (
         <VideoModal video={selectedVideo} onClose={() => setSelectedVideo(null)} />
