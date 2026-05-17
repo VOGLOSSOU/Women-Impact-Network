@@ -21,11 +21,37 @@
       "Bash(ls /home/nathan-voglossou/WIN/extracted-images/Programmes-cadre-de-WIN-WPS-Office-*.png)",
       "Read(//dev/**)",
       "WebFetch(domain:www.facebook.com)",
-      "WebFetch(domain:web.facebook.com)"
+      "WebFetch(domain:web.facebook.com)",
+      "Bash(ffmpeg -version)",
+      "Bash(mkdir -p /home/nathan-voglossou/WIN/yeba-oppeci-website/public/videos)",
+      "Bash(ffmpeg -i video-collective-1.MOV -c:v libx264 -crf 28 -preset fast -c:a aac -movflags +faststart /home/nathan-voglossou/WIN/yeba-oppeci-website/public/videos/video-collective-1.mp4 -y)",
+      "Bash(ffmpeg -i video-collective-1.mp4 -ss 00:00:02 -vframes 1 -vf scale=800:450 ../thumbs-testimony/collective-1.jpg -y)",
+      "Bash(ffmpeg -i video-collective-2.mp4 -ss 00:00:02 -vframes 1 -vf scale=800:450 ../thumbs-testimony/collective-2.jpg -y)",
+      "Bash(ffmpeg -i dimom-ramatha.mp4 -ss 00:00:02 -vframes 1 -vf scale=800:450 ../thumbs-testimony/dimom-ramatha.jpg -y)",
+      "Bash(ffmpeg -i gbadamassi-rouckayath.mp4 -ss 00:00:02 -vframes 1 -vf scale=800:450 ../thumbs-testimony/gbadamassi-rouckayath.jpg -y)",
+      "Bash(ffmpeg -i beneficiaire-temoignant.mp4 -ss 00:00:02 -vframes 1 -vf scale=800:450 ../thumbs-testimony/beneficiaire-temoignant.jpg -y)",
+      "Bash(ffmpeg -i beneficiaire-reconnaissante.mp4 -ss 00:00:02 -vframes 1 -vf scale=800:450 ../thumbs-testimony/beneficiaire-reconnaissante.jpg -y)",
+      "Bash(ffmpeg -i videos/video-collective-1.mp4 -ss 00:00:02 -vframes 1 -update 1 thumbs-testimony/collective-1.jpg -y)",
+      "Bash(ffmpeg -i videos/video-collective-2.mp4 -ss 00:00:02 -vframes 1 -update 1 thumbs-testimony/collective-2.jpg -y)",
+      "Bash(ffmpeg -i videos/dimom-ramatha.mp4 -ss 00:00:02 -vframes 1 -update 1 thumbs-testimony/dimom-ramatha.jpg -y)",
+      "Bash(ffmpeg -i videos/gbadamassi-rouckayath.mp4 -ss 00:00:02 -vframes 1 -update 1 thumbs-testimony/gbadamassi-rouckayath.jpg -y)",
+      "Bash(ffmpeg -i videos/beneficiaire-temoignant.mp4 -ss 00:00:02 -vframes 1 -update 1 thumbs-testimony/beneficiaire-temoignant.jpg -y)",
+      "Bash(ffmpeg -i videos/beneficiaire-reconnaissante.mp4 -ss 00:00:02 -vframes 1 -update 1 thumbs-testimony/beneficiaire-reconnaissante.jpg -y)",
+      "Bash(ls -lh /tmp/beneficiaire-reconnaissante-h264.mp4 /tmp/beneficiaire-temoignant-h264.mp4 /tmp/dimom-ramatha-h264.mp4 2>&1)",
+      "Read(//tmp/**)",
+      "Bash(ffprobe -v quiet -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 /home/nathan-voglossou/WIN/yeba-oppeci-website/public/videos/dimom-ramatha.mp4)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=codec_name,codec_long_name -of default /home/nathan-voglossou/WIN/yeba-oppeci-website/public/videos/dimom-ramatha.mp4)",
+      "Bash(ffprobe -v quiet -select_streams v:0 -show_entries stream=codec_name -of csv=p=0 \"/home/nathan-voglossou/WIN/videos-testimony/DIMOM_RAMATHA_35ans_COMMERÇANTE-temoignagne.MP4\")",
+      "Bash(ffmpeg -i /home/nathan-voglossou/WIN/videos-testimony/DIMOM_RAMATHA_35ans_COMMERÇANTE-temoignagne.MP4 -c:v libx264 -crf 28 -preset fast -c:a aac -movflags +faststart /home/nathan-voglossou/WIN/yeba-oppeci-website/public/videos/dimom-ramatha.mp4 -y)",
+      "Bash(git rm *)",
+      "Bash(python3 -c \"import docx\")",
+      "Bash(pip install *)",
+      "Bash(python3 -c \"import docx; print\\('ok'\\)\")"
     ],
     "additionalDirectories": [
       "/home/nathan-voglossou/WIN",
-      "/home/nathan-voglossou/WIN/win-website/public"
+      "/home/nathan-voglossou/WIN/win-website/public",
+      "/home/nathan-voglossou/WIN/yeba-oppeci-website/public"
     ]
   }
 }

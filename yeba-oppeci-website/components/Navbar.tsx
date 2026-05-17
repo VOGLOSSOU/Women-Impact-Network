@@ -22,10 +22,11 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "/",            label: t({ fr: "Accueil",    en: "Home" }) },
-    { href: "/about",       label: t(nav.about) },
-    { href: "/activities",  label: t(nav.activities) },
-    { href: "/contact",     label: t(nav.contact) },
+    { href: "/",               label: t({ fr: "Accueil",       en: "Home" }) },
+    { href: "/about",          label: t(nav.about) },
+    { href: "/activities",     label: t(nav.activities) },
+    { href: "/testimonials",   label: t({ fr: "Témoignages",   en: "Testimonials" }) },
+    { href: "/contact",        label: t(nav.contact) },
   ];
 
   const transparent = isHome && !scrolled;
