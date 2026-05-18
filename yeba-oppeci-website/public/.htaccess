@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect /page to /page/ (trailing slash)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*[^/])$ /$1/ [R=301,L]
+
+# Serve index.html from directories
+DirectoryIndex index.html
