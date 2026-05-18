@@ -86,6 +86,8 @@ function VideoModal({ video, onClose }: { video: VideoItem; onClose: () => void 
           ref={videoRef}
           src={video.src}
           controls
+          playsInline
+          preload="metadata"
           className="w-full"
           style={{ maxHeight: "70vh" }}
         />
