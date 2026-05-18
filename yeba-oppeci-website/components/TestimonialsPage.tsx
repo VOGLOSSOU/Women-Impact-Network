@@ -68,7 +68,6 @@ function VideoModal({ video, onClose }: { video: VideoItem; onClose: () => void 
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    videoRef.current?.play().catch(() => {});
     document.body.style.overflow = "hidden";
     return () => { document.body.style.overflow = ""; };
   }, []);

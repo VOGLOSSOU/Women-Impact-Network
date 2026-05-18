@@ -1,4 +1,15 @@
 Options -Indexes
+
+# MIME types — requis pour iOS Safari
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType image/jpeg .jpg .jpeg
+AddType image/png .png
+AddType image/webp .webp
+
+# Range requests — requis pour le streaming vidéo sur iOS
+Header set Accept-Ranges bytes
+
 RewriteEngine On
 
 # Redirect /page to /page/ (trailing slash)
