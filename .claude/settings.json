@@ -46,7 +46,15 @@
       "Bash(git rm *)",
       "Bash(python3 -c \"import docx\")",
       "Bash(pip install *)",
-      "Bash(python3 -c \"import docx; print\\('ok'\\)\")"
+      "Bash(python3 -c \"import docx; print\\('ok'\\)\")",
+      "Bash(xargs -I{} du -sh {})",
+      "Bash(awk '{print $1, $2}')",
+      "Bash(grep -E '\\\\.\\(pptx|pdf\\)$')",
+      "Bash(grep -E '\\\\.\\(pptx|pdf\\)$' -i)",
+      "Bash(xargs -d '\\\\n' git rm --cached)",
+      "Bash(xargs -0 git rm --cached)",
+      "Bash(xargs -0 -I{} sh -c 'echo \"{}\" | grep -qi \"pptx\\\\|\\\\.pdf\" && git rm --cached \"{}\" || true')",
+      "Bash(grep -v \"^$\")"
     ],
     "additionalDirectories": [
       "/home/nathan-voglossou/WIN",
