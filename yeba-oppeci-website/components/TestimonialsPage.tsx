@@ -8,60 +8,70 @@ import WrittenTestimonials from "@/components/WrittenTestimonials";
 type BiLang = { fr: string; en: string };
 
 type VideoItem = {
-  src: string;
+  src?: string;
+  youtubeId?: string;
   thumb: string;
   name: BiLang;
   info: BiLang;
   tag: BiLang;
 };
 
-const collectiveVideos: VideoItem[] = [
-  {
-    src: "/videos/video-collective-1.mp4",
-    thumb: "/thumbs-testimony/collective-1.jpg",
-    name: { fr: "Témoignages collectifs — Engagement terrain", en: "Collective testimonials — Field engagement" },
-    info: { fr: "Bénéficiaires YEBA OPPECI", en: "YEBA OPPECI beneficiaries" },
-    tag: { fr: "Collectif", en: "Collective" },
-  },
-  {
-    src: "/videos/video-collective-2.mp4",
-    thumb: "/thumbs-testimony/collective-2.jpg",
-    name: { fr: "Témoignages collectifs — Solidarité & impact", en: "Collective testimonials — Solidarity & impact" },
-    info: { fr: "Bénéficiaires YEBA OPPECI", en: "YEBA OPPECI beneficiaries" },
-    tag: { fr: "Collectif", en: "Collective" },
-  },
-];
+// collectiveVideos: liens YouTube à brancher quand disponibles
 
 const individualVideos: VideoItem[] = [
   {
-    src: "/videos/dimom-ramatha.mp4",
-    thumb: "/thumbs-testimony/dimom-ramatha.jpg",
+    youtubeId: "wewx4aHK1WU",
+    thumb: "https://img.youtube.com/vi/wewx4aHK1WU/hqdefault.jpg",
     name: { fr: "Dimom Ramatha", en: "Dimom Ramatha" },
     info: { fr: "35 ans · Commerçante", en: "35 years old · Trader" },
     tag: { fr: "Témoignage", en: "Testimonial" },
   },
   {
-    src: "/videos/gbadamassi-rouckayath.mp4",
-    thumb: "/thumbs-testimony/gbadamassi-rouckayath.jpg",
+    youtubeId: "61p22vcp4i8",
+    thumb: "https://img.youtube.com/vi/61p22vcp4i8/hqdefault.jpg",
     name: { fr: "Gbadamassi Rouckayath", en: "Gbadamassi Rouckayath" },
     info: { fr: "Bénéficiaire YEBA OPPECI", en: "YEBA OPPECI beneficiary" },
     tag: { fr: "Témoignage", en: "Testimonial" },
   },
   {
-    src: "/videos/beneficiaire-temoignant.mp4",
-    thumb: "/thumbs-testimony/beneficiaire-temoignant.jpg",
+    youtubeId: "Zl66Gm1oJHY",
+    thumb: "https://img.youtube.com/vi/Zl66Gm1oJHY/hqdefault.jpg",
     name: { fr: "Une bénéficiaire témoigne", en: "A beneficiary speaks" },
     info: { fr: "Bénéficiaire YEBA OPPECI", en: "YEBA OPPECI beneficiary" },
     tag: { fr: "Témoignage", en: "Testimonial" },
   },
   {
-    src: "/videos/beneficiaire-reconnaissante.mp4",
-    thumb: "/thumbs-testimony/beneficiaire-reconnaissante.jpg",
+    youtubeId: "4t77AqwluYo",
+    thumb: "https://img.youtube.com/vi/4t77AqwluYo/hqdefault.jpg",
     name: { fr: "Témoignage de gratitude", en: "Testimonial of gratitude" },
     info: { fr: "Une bénéficiaire reconnaissante", en: "A grateful beneficiary" },
     tag: { fr: "Témoignage", en: "Testimonial" },
   },
 ];
+
+function YoutubeEmbed({ youtubeId, thumb }: { youtubeId: string; thumb: string }) {
+  const [loaded, setLoaded] = useState(false);
+
+  return (
+    <div className="relative w-full aspect-video bg-black">
+      {!loaded && (
+        <div className="absolute inset-0 flex items-center justify-center"
+          style={{ backgroundImage: `url(${thumb})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        >
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="relative w-12 h-12 rounded-full border-4 border-white/30 border-t-white animate-spin" />
+        </div>
+      )}
+      <iframe
+        src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        onLoad={() => setLoaded(true)}
+        className={`w-full h-full transition-opacity duration-300 ${loaded ? "opacity-100" : "opacity-0"}`}
+      />
+    </div>
+  );
+}
 
 function VideoModal({ video, onClose }: { video: VideoItem; onClose: () => void }) {
   const { t } = useLang();
@@ -81,15 +91,19 @@ function VideoModal({ video, onClose }: { video: VideoItem; onClose: () => void 
         className="w-full max-w-3xl rounded-3xl overflow-hidden bg-[#0A1F0A] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <video
-          ref={videoRef}
-          src={video.src}
-          controls
-          playsInline
-          preload="metadata"
-          className="w-full"
-          style={{ maxHeight: "70vh" }}
-        />
+        {video.youtubeId ? (
+          <YoutubeEmbed youtubeId={video.youtubeId} thumb={video.thumb} />
+        ) : (
+          <video
+            ref={videoRef}
+            src={video.src}
+            controls
+            playsInline
+            preload="metadata"
+            className="w-full"
+            style={{ maxHeight: "70vh" }}
+          />
+        )}
         <div className="p-5 flex items-center justify-between">
           <div>
             <p className="text-white font-black text-lg">{t(video.name)}</p>
@@ -177,7 +191,8 @@ export default function TestimonialsPage() {
         </p>
       </section>
 
-      {/* Témoignages collectifs */}
+      {/* Témoignages collectifs — liens YouTube à ajouter */}
+      {/* TODO: remplacer les vidéos locales par les liens YouTube quand disponibles
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
@@ -201,20 +216,21 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* Témoignages individuels */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
             <span className="inline-block px-4 py-1.5 rounded-full bg-[#1B6B3A]/10 text-[#1B6B3A] text-xs font-bold tracking-widest uppercase mb-4">
-              {t({ fr: "Voix individuelles", en: "Individual voices" })}
+              {t({ fr: "Vidéos", en: "Videos" })}
             </span>
             <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
-              {t({ fr: "Témoignages individuels", en: "Individual testimonials" })}
+              {t({ fr: "Quelques témoignages vidéos", en: "Some video testimonials" })}
             </h2>
             <p className="text-gray-500 mt-2 max-w-xl">
               {t({
-                fr: "Des bénéficiaires partagent en leur propre nom leur transformation personnelle.",
+                fr: "Des bénéficiaires partagent en leurs propres mots leur transformation personnelle.",
                 en: "Beneficiaries share in their own words their personal transformation.",
               })}
             </p>
